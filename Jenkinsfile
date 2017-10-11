@@ -10,6 +10,12 @@ pipeline {
                 '''
             }
         }
+        stage('test') {
+            steps {
+                sh 'echo "Testing now"'
+                sh 'uname -a'
+            }
+        }
     }
     post {
         always {
